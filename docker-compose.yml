@@ -1,0 +1,10 @@
+services:
+  dsh-web:
+    build: .
+    container_name: dsh
+    ports:
+      - "27593:27593"
+    environment:
+      PORT: 27593
+      TRUSTED_HOST: dsh.vblg.top
+    restart: unless-stopped
